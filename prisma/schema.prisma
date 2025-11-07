@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+//Prisma Client generator
+//This tells Prisma to generate a TypeScript/JavaScript client that you can use to interact with your database.
+//This allows you to perform database operations and import Prisma.
+generator client {
+  provider = "prisma-client-js"
+}
+
+//Defines the database connection details for prisma.
+//The url is taken from an environment variable named DATABASE_URL.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//represents a transcript of a meeting that is stored in the database.
+model Transcript {
+  id        String    @id @default(cuid())
+  text      String
+  createdAt DateTime  @default(now())
+  analysis  Analysis?
+}
+
+//represents the analysis of a meeting transcript that is stored in the database.
+model Analysis {
+  id           String     @id @default(cuid())
+  transcriptId String     @unique
+  actionItems  Json
+  decisions    Json
+  sentiment    String
+  createdAt    DateTime   @default(now())
+  transcript   Transcript @relation(fields: [transcriptId], references: [id], onDelete: NoAction)
+}
