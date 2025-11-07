@@ -8,18 +8,27 @@ This application analyzes meeting transcripts using Anthropic's Claude AI to ext
 
 This project uses the following main dependencies:
 Next.js
+
 React
+
 Prisma
+
 Anthropic AI SDK
+
 React Query
+
 Tailwind CSS
+
 Axios
+
 Zod
 
 # Prerequisites
 
 Node.js v16 or higher
+
 PostgreSQL database
+
 Anthropic API key
 
 # How To Run/Set Up
