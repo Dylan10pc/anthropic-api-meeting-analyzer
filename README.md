@@ -30,13 +30,14 @@ Anthropic API key
 
 3. **Environment Setup:** Create a *.env* file in the root directory and add these:
    **DATABASE_URL="postgresql://username:password@localhost:5432/your_database_name"** (I used neon)
+   
    **ANTHROPIC_API_KEY="your-anthropic-api-key"** (I have it set up to use claude-3-5-haiku-latest make sure the api can run that model)
 
-4. **Database Setup:** Please run *npx prisma generate* and then *npx prisma migrate dev*. In a terminal.
+5. **Database Setup:** Please run *npx prisma generate* and then *npx prisma migrate dev*. In a terminal.
 
-5. **Start the development server:** Run **npm run dev** inside a terminal
+6. **Start the development server:** Run **npm run dev** inside a terminal
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+7. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 #  Decisions:
 While making the project. I decided to use Tailwind CSS for my front-end, as I have been actively learning it recently and wanted to continue learning. Implementing it into this project also helped me build a user-friendly UI. 
