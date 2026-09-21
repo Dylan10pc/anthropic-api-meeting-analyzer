@@ -39,7 +39,7 @@ Anthropic API key
 
 3. **Environment Setup:** Create a *.env* file in the root directory and add these:
    
-   **DATABASE_URL= (I used Neon)
+   **DATABASE_URL= (I used Neon)**
    
    **ANTHROPIC_API_KEY="your-anthropic-api-key"** (I have it set up to use claude-3-5-haiku-latest make sure the api can run that model)
 
